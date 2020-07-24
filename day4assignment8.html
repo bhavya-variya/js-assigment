@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+    // function ask(question,yes,no) {
+    //     if (confirm(question)) yes()
+    //     else no();
+    // }
+    // ask(
+    //     "do you agree?",
+    //     function() { alert("you agreed.");},
+    //     function() { alert("you canceled the execution.");}
+
+    // );
+        let ask = (question, yes, no) => confirm(question) ? yes() : no();
+    ask(
+    'Do you agree?',
+    () => alert("You agreed."),
+    () => alert("You canceled the execution.")
+    );
+</script>
+</body>
+</html>
