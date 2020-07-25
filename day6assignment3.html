@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+body {
+    transition: background-color .3s;
+}
+
+body[data-light-mode=dark] {
+    background-color: #000;
+    color: #eee;
+}
+</style> 
+    <title>clock and dark mode </title>
+    <link rel="stylesheet" href="styles.css">
+    <h1>javascript</h2>
+     <h4 id="time"></h4>
+</head>
+<body>
+    <button onclick="toggle_light_mode()">
+        Toggle Light Mode
+    </button>
+    <script>
+    let x = prompt("what is your name?");
+    document.write(`</br>hello ${x},welcome to javascript's world`);
+    const ctime = document.getElementById('time');
+
+
+function clock(){
+    let date = new Date();
+    let time = date.toLocaleTimeString();
+    ctime.innerText = time;
+}
+setInterval(clock,1000);
+    
+    //     function changecolour(){
+    //         setTimeout(()=>{
+    //         document.body.style.backgroundColor= 'black';
+    //         document.body.style.color= 'white';
+    //     },1000)
+           
+    //    }
+    //    changecolour();
+    function toggle_light_mode() {
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "dark") {
+	localStorage.lightMode = "light";
+	app.setAttribute("data-light-mode", "light");
+    } else {
+	localStorage.lightMode = "dark";
+	app.setAttribute("data-light-mode", "dark");
+    }		
+}
+    </script>
+</body>
+</html>

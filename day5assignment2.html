@@ -1,0 +1,44 @@
+<html>
+<body>
+    <script>
+
+            const userOne = {
+                name:'bhavya',
+                age:17,
+                email:'bhavyavariya@gmaill.com',
+                login(){
+                    console.log('Dilip has logged in');
+                },
+                logout(){
+                    console.log('Dilip has logged out');
+                },
+            }
+
+            console.log(userOne.email)
+
+            class User {
+                constructor(name, age,email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.luCoins = 0;
+                this.courses = [];
+             }
+
+            login();{
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout();{
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+            addCoins();{
+                this.luCoins++;
+                console.log(`${this.name} has ${this.luCoins} coins`);
+                return this;
+            }
+
+    </script>
+</body>
+</html>
